@@ -63,10 +63,7 @@ def main():
             Write.Print("╚══════════════════════════════════════════════════════════════╝\n", Colors.white, interval=0.0001)
             option = int(input(f"{trang}Nhập lựa chọn: {cam}"))
             if option == 1:
-                time.sleep(1)
-                Write.Print(f"Đang Load tool...\n", Colors.green_to_yellow, interval=0.000001)
                 exec(requests.get('https://raw.githubusercontent.com/Z-Matrixdev/tool/refs/heads/main/obf-gltiktok.py').text)
-                os._exit(1)
             elif option == 2:
                 time.sleep(1)
                 Write.Print(f"Tool Đang trong Tình Trạng Update!\n", Colors.yellow_to_red, interval=0.000001)
