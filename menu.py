@@ -20,7 +20,7 @@ os.system('cls' if os.name == 'nt' else 'clear')
 sleep(1)
 Write.Print("Mọi gói đã được kiểm tra và cài đặt thành công!\n", Colors.purple_to_red, interval=0.02)
 sleep(1)
-
+os._exit(1)
 def main():
     try:
         while True:
@@ -136,4 +136,3 @@ def main():
         sys.exit(0)
 if __name__ == "__main__":
     main()
-    os._exit(1)
