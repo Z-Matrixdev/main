@@ -25,13 +25,13 @@ TOOL_SCRIPTS = {
 }
 
 def load_script(script_name):
-    """Safely load and execute a local script."""
+    """Tải và thực thi một script từ GitHub."""
     try:
-        spec = exec(requests.get(f"https://raw.githubusercontent.com/Z-Matrixdev/tool/refs/heads/main/{script_name}").text)
-        if spec is None:
-            raise ImportError(f"Cannot find script: {script_name}")
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
+        response = requests.get(f"https://raw.githubusercontent.com/Z-Matrixdev/tool/refs/heads/main/{script_name}")
+        if response.status_code == 200:
+            exec(response.text, globals())  # Chạy trong global scope
+        else:
+            raise Exception(f"Không tìm thấy script: {script_name}")
     except Exception as e:
         Write.Print(f"Error loading script {script_name}: {str(e)}\n", Colors.red, interval=0.0001)
         sys.exit(1)
