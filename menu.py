@@ -34,9 +34,9 @@ def main():
             Write.Print(">>>                       TOOL GOLIKE                       <<<\n", custom_gradient, interval=0.0001)
             Write.Print("╔══════════════════════════════════════════════════════════════╗\n", Colors.white, interval=0.0001)
             Write.Print("║ [0] OUT TOOL                                                 ║\n", Colors.white, interval=0.0001)
-            Write.Print("║ [1] GOLIKE TIKTOK      [ADB]                                 ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [1] GOLIKE TIKTOK      [ADB & AUTO CLICK]                    ║\n", Colors.white, interval=0.0001)
             Write.Print("║ [2] GOLIKE TIKTOK PC   [COOKIE]                [UPDATING]    ║\n", Colors.white, interval=0.0001)
-            Write.Print("║ [3] GOLIKE SNAPCHAT    [COOKIE]                              ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [3] GOLIKE SNAPCHAT    [AUTO CLICK]                          ║\n", Colors.white, interval=0.0001)
             Write.Print("║ [4] GOLIKE TWITTER     [COOKIE]                [UPDATING]    ║\n", Colors.white, interval=0.0001)
             Write.Print("╚══════════════════════════════════════════════════════════════╝\n", Colors.white, interval=0.0001)
             custom_gradient = Colors.yellow_to_red
