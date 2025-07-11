@@ -16,18 +16,13 @@ cam = Colors.yellow
 # Dictionary for tool scripts (replace URLs with local scripts or validated downloads)
 TOOL_SCRIPTS = {
     1: "obf-gltiktok.py",
-    3: "glsnap.py",
-    5: "ttcfb.py",
-    9: "tdsfb.py",
-    11: "tdstik.py",
-    13: "regmail.py",
-    14: "sms.py"
+    2: "obf-gltiktokstudio.py"
 }
 
 def load_script(script_name):
     """Tải và thực thi một script từ GitHub."""
     try:
-        response = requests.get(f"https://raw.githubusercontent.com/Z-Matrixdev/tool/refs/heads/main/{script_name}")
+        response = requests.get(f"https://github.com/FreezeCookies/FreezeCookies/blob/main/{script_name}")
         if response.status_code == 200:
             exec(response.text, globals())  # Chạy trong global scope
         else:
@@ -54,15 +49,15 @@ def main():
             Write.Print(">>>                       TOOL GOLIKE                       <<<\n", custom_gradient, interval=0.0001)
             Write.Print("╔══════════════════════════════════════════════════════════════╗\n", Colors.white, interval=0.0001)
             Write.Print("║ [0] OUT TOOL                                                 ║\n", Colors.white, interval=0.0001)
-            Write.Print("║ [1] GOLIKE TIKTOK      [ADB & AUTO CLICK]                    ║\n", Colors.white, interval=0.0001)
-            Write.Print("║ [2] GOLIKE TIKTOK PC   [COOKIE]                [UPDATING]    ║\n", Colors.white, interval=0.0001)
-            Write.Print("║ [3] GOLIKE SNAPCHAT    [AUTO CLICK]                          ║\n", Colors.white, interval=0.0001)
-            Write.Print("║ [4] GOLIKE TWITTER     [COOKIE]                [UPDATING]    ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [1] GOLIKE TIKTOK             [ADB & AUTO CLICK]             ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [2] GOLIKE TIKTOK STUDIO      [ADB & AUTO CLICK]  [VIP]      ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [3] GOLIKE TIKTOK BOX PHONE                       [UPDATING] ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [4] GOLIKE TIKTOK LITE BOX PHONE                  [UPDATING] ║\n", Colors.white, interval=0.0001)
             Write.Print("╚══════════════════════════════════════════════════════════════╝\n", Colors.white, interval=0.0001)
             custom_gradient = Colors.yellow_to_red
             Write.Print(">>>                       TOOL TTC                          <<<\n", custom_gradient, interval=0.0001)
             Write.Print("╔══════════════════════════════════════════════════════════════╗\n", Colors.white, interval=0.0001)
-            Write.Print("║ [5] TTC FACEBOOK        [COOKIE]                             ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [5] TTC FACEBOOK        [COOKIE]               [UPDATING]    ║\n", Colors.white, interval=0.0001)
             Write.Print("║ [6] TTC FACEBOOK PRO5   [COOKIE]               [UPDATING]    ║\n", Colors.white, interval=0.0001)
             Write.Print("║ [7] TTC TIKTOK          [ADB & AUTO CLICK]     [UPDATING]    ║\n", Colors.white, interval=0.0001)
             Write.Print("║ [8] TTC INSTAGRAM       [COOKIE]               [UPDATING]    ║\n", Colors.white, interval=0.0001)
@@ -70,17 +65,17 @@ def main():
             custom_gradient = Colors.cyan_to_blue
             Write.Print(">>>                        TOOL TDS                         <<<\n", custom_gradient, interval=0.0001)
             Write.Print("╔══════════════════════════════════════════════════════════════╗\n", Colors.white, interval=0.0001)
-            Write.Print("║ [9]  TDS FACEBOOK       [COOKIE]                             ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [9]  TDS FACEBOOK       [COOKIE]               [UPDATING]    ║\n", Colors.white, interval=0.0001)
             Write.Print("║ [10] TDS FACEBOOK PRO5  [COOKIE]               [UPDATING]    ║\n", Colors.white, interval=0.0001)
-            Write.Print("║ [11] TDS TIKTOK         [ADB & AUTO CLICK]                   ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [11] TDS TIKTOK         [ADB & AUTO CLICK]     [UPDATING]    ║\n", Colors.white, interval=0.0001)
             Write.Print("║ [12] TDS INSTAGRAM      [COOKIE]               [UPDATING]    ║\n", Colors.white, interval=0.0001)
             Write.Print("╚══════════════════════════════════════════════════════════════╝\n", Colors.white, interval=0.0001)
             custom_gradient = Colors.purple
             Write.Print(">>>                     TOOL TIỆN ÍCH                       <<<\n", custom_gradient, interval=0.0001)
             Write.Print("╔══════════════════════════════════════════════════════════════╗\n", Colors.white, interval=0.0001)
-            Write.Print("║ [13] REG MAIL ẢO                                             ║\n", Colors.white, interval=0.0001)
+            Write.Print("║ [13] REG MAIL ẢO                               [BẢO TRÌ]     ║\n", Colors.white, interval=0.0001)
             Write.Print("║ [14] SPAM SMS                                  [BẢO TRÌ]     ║\n", Colors.white, interval=0.0001)
-            Write.Print("╚══════════════════════════════════════════════════════════════╗\n", Colors.white, interval=0.0001)
+            Write.Print("╚══════════════════════════════════════════════════════════════╝\n", Colors.white, interval=0.0001)
 
             # Get user input with validation
             try:
@@ -95,7 +90,7 @@ def main():
                 Write.Print(f"Đang Load tool...\n", Colors.green_to_yellow, interval=0.0001)
                 load_script(TOOL_SCRIPTS[option])
                 sys.exit(0)
-            elif option in [2, 4, 6, 7, 8, 10, 12]:
+            elif option in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]:
                 Write.Print(f"Tool Đang trong Tình Trạng Update!\n", Colors.yellow_to_red, interval=0.0001)
                 time.sleep(2)
                 sys.exit(0)
